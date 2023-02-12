@@ -5,34 +5,45 @@ export default function VotersPage(){
 
     return (
         <div className="w-full h-screen fixed left-0 top-0 bg-white overflow-y-scroll">
-            <div className="flex">
-                <div className="subnav fixed bg-slate-100 w-[12rem] h-screen flex flex-col items-center justify-between">
+            <div className="md:flex relative">
+                <div className="subnav hidden fixed bg-slate-100 w-[12rem] h-screen md:flex flex-col items-center justify-between">
                     <div className="text-2xl mt-5 text-primary font-semibold">
                         <h2>Academia</h2>
                     </div>
                     <ul className="flex flex-col gap-y-10 [&>*]:cursor-pointer">
                         <li>
-                            <NavLink >Dashboard</NavLink>
+                            <NavLink to="voterspage" className={({isActive}) => isActive? "text-primary border-b-2 border-b-primary" : "text-slate-900 border-b-transparent hover:border-b-primary hover:text-primary"} end>Dashboard</NavLink>
                         </li>
                         <li>
-                            <NavLink>Vote</NavLink>
+                            <NavLink to="voterspage/election" className={({isActive}) => isActive? "text-primary border-b-2 border-b-primary" : "text-slate-900 border-b-transparent hover:border-b-primary hover:text-primary"}>Vote</NavLink>
                         </li>
                         <li>
-                            <NavLink>Vote Result</NavLink>
+                            <NavLink to="voterspage/vote-result" className={({isActive}) => isActive? "text-primary border-b-2 border-b-primary" : "text-slate-900 border-b-transparent hover:border-b-primary hover:text-primary"}>Vote Result</NavLink>
                         </li>
                     </ul>
                     <div></div>
                 </div>
+                <div className="fixed top-0 h-16 md:h-14 md:-z-10 w-full bg-slate-100 flex items-center justify-between px-4 md:px-0">
+                    <div className="text-2xl md:mt-5 text-primary font-semibold">
+                        <h2>Academia</h2>
+                    </div>
+                    
+                    <div className="w-full md:relative">
+                        <div className="w-12 h-12 rounded-full bg-red-500 absolute right-6 top-2 md:-top-6">
+                            <img src="" alt="" />
+                        </div>
+                    </div>
+                </div>
 
-                <div className="ml-[12rem]">
-                    <div className="mt-10">
+                <div className="md:ml-[12rem] -z-20">
+                    <div className="mt-12">
                         <div>
                             <h2 className="text-left text-2xl ml-3 mb-4">Ongoing elections</h2>
                         </div>
-                        <div className="flex items-center gap-8 ml-3 [&>*]:w-[15rem] [&>*]:h-[15rem] [&>*]:bg-slate-400 [&>*]:rounded-lg">
-                            <div></div>
-                            <div></div>
-                            <div></div>
+                        <div className="flex items-center flex-wrap gap-8 ml-3 [&>*]:w-[15rem] [&>*]:h-[15rem] [&>*]:bg-slate-400 [&>*]:rounded-lg [&>*]:pt-4 font-semibold [&>*:hover]:bg-slate-800 [&>*:hover]:text-white [&>*]:cursor-pointer">
+                            <div><h2>Departmental Elections</h2></div>
+                            <div><h2>Faculty Elections</h2></div>
+                            <div><h2>Others</h2></div>
                         </div>
                     </div>
 
@@ -41,10 +52,10 @@ export default function VotersPage(){
                         <div>
                             <h2 className="text-left text-2xl ml-3 mb-4">Live Results</h2>
                         </div>
-                        <div className="flex items-center gap-8 ml-3 [&>*]:w-[15rem] [&>*]:h-[15rem] [&>*]:bg-slate-400 [&>*]:rounded-lg">
-                            <div></div>
-                            <div></div>
-                            <div></div>
+                        <div className="flex items-center flex-wrap gap-8 ml-3 [&>*]:w-[15rem] [&>*]:h-[15rem] [&>*]:bg-slate-400 [&>*]:rounded-lg [&>*]:pt-4 font-semibold [&>*:hover]:bg-slate-800 [&>*:hover]:text-white [&>*]:cursor-pointer">
+                            <div><h2>Departmental Elections</h2></div>
+                            <div><h2>Faculty Elections</h2></div>
+                            <div><h2>Others</h2></div>
                         </div>
                     </div>
 
@@ -53,10 +64,10 @@ export default function VotersPage(){
                         <div>
                             <h2 className="text-left text-2xl ml-3 mb-4">Live Results</h2>
                         </div>
-                        <div className="flex items-center gap-8 ml-3 [&>*]:w-[15rem] [&>*]:h-[15rem] [&>*]:bg-slate-400 [&>*]:rounded-lg">
-                            <div></div>
-                            <div></div>
-                            <div></div>
+                        <div className="flex items-center flex-wrap gap-8 ml-3 [&>*]:w-[15rem] [&>*]:h-[15rem] [&>*]:bg-slate-400 [&>*]:rounded-lg [&>*]:pt-4 font-semibold [&>*:hover]:bg-slate-800 [&>*:hover]:text-white [&>*]:cursor-pointer">
+                            <div><h2>Departmental Elections</h2></div>
+                            <div><h2>Faculty Elections</h2></div>
+                            <div><h2>Others</h2></div>
                         </div>
                     </div>
                 </div>

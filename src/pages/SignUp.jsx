@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import signup from "../assets/signup.jpg"
 import { FcGoogle } from "react-icons/fc"
 

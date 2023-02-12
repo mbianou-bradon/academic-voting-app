@@ -38,11 +38,17 @@ const router = createBrowserRouter (
         { path: '/', element: <Login />,},
         { path: '/login/admin', element: <AdminLogin />},
         { path: '/login/forgot_password', element: <ForgotPassword />},
-        { path: '/votersPage', element: <VotersPage />},
         { path: '/about', element: <AboutUs />},
         { path: '/contact', element: <Contact />},
         { path: '/how-to-vote', element: <HowToVote />},
-        { path: '/signup', element: <SignUp />}
+        { path: '/signup', element: <SignUp />},
+        { element: <VotersPage />,
+          children: [
+            { path: '/votersPage', element: <VotersPage/>},
+            { path: '/votersPage/election', element: <VotersPage/>},
+            { path: '/votersPage/vote-result', element: <VotersPage/>},
+          ]
+        }
       ]
     }
   ]
