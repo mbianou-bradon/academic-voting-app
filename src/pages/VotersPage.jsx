@@ -6,7 +6,7 @@ export default function VotersPage(){
     return (
         <div className="w-full h-screen fixed left-0 top-0 bg-white overflow-y-scroll">
             <div className="md:flex relative">
-                <div className="subnav hidden fixed bg-slate-100 w-[12rem] h-screen md:flex flex-col items-center justify-between">
+                <div className="subnav hidden fixed bg-slate-100 w-[12rem] h-screen md:flex flex-col items-center justify-between z-10">
                     <div className="text-2xl mt-5 text-primary font-semibold">
                         <h2>Academia</h2>
                     </div>
@@ -23,7 +23,7 @@ export default function VotersPage(){
                     </ul>
                     <div></div>
                 </div>
-                <div className="fixed top-0 h-16 md:h-14 md:-z-10 w-full bg-slate-100 flex items-center justify-between px-4 md:px-0">
+                <div className="fixed top-0 h-16 md:h-14 md:-z-0 w-full bg-slate-100 flex items-center justify-between px-4 md:px-0">
                     <div className="text-2xl md:mt-5 text-primary font-semibold">
                         <h2>Academia</h2>
                     </div>
@@ -35,8 +35,8 @@ export default function VotersPage(){
                     </div>
                 </div>
 
-                <div className="md:ml-[12rem] -z-20">
-                    <div className="mt-12">
+                <div className="md:ml-[12rem]">
+                    <div className="mt-16">
                         <div>
                             <h2 className="text-left text-2xl ml-3 mb-4">Ongoing elections</h2>
                         </div>
