@@ -1,7 +1,19 @@
+import { onAuthStateChanged } from "firebase/auth"
+import { useEffect, useState } from "react"
 import { NavLink } from "react-router-dom"
+import { auth } from "../Backend/firebaseConfig"
 
 
 export default function VotersPage(){
+    const [user, setUser] = useState({})
+    useEffect(
+        () => {
+            onAuthStateChanged(auth, user => {
+                setUser(user)
+            })
+        },
+        []
+    )
 
     return (
         <div className="w-full h-screen fixed left-0 top-0 bg-white overflow-y-scroll">
@@ -30,7 +42,7 @@ export default function VotersPage(){
                     
                     <div className="w-full md:relative">
                         <div className="w-12 h-12 rounded-full bg-red-500 absolute right-6 top-2 md:-top-6">
-                            <img src="" alt="" />
+                            <img src={user.photoURL} alt="" className="h-full rounded-full"/>
                         </div>
                     </div>
                 </div>
